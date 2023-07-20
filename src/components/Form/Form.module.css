@@ -1,0 +1,90 @@
+.containerAll {
+    background-image: url('../../images/login-background.jpg');
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerLogin {
+    background-color: transparent;
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    border-radius: 5em;
+    padding: 2em;
+
+    &:hover {
+        box-shadow: inset 0 0 1em green, 0 0 1em green;
+        transition: ease-in-out 0.4s;
+    }
+}
+.containerh2 {
+    margin: 15px 0;
+
+    .tituloLogin {
+        font-size: 2em; 
+        color: white;
+    }
+}
+.containerEmail {
+    margin: 10px 0;
+}
+.labelLogin {
+    font-size: 1.3em;
+    text-align: start;
+    margin: 5px 0;
+    padding-left: 4px;
+    color: #9cc5cb;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 
+    0 0 1em blue;
+    display: block;
+    margin-bottom: 10px;
+    &:hover {
+        font-size: 1.5em;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+.inputLogin {
+    border: none;
+    margin: 0 5px ;
+    display: block;
+    padding: 12px;
+    border-radius: 0.5em;
+    width: 90%;
+}
+
+.btnLogin {
+    width: 25%;
+    align-self: center;
+    border-radius: 0.5em;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    outline: 2px solid #03f81f;
+    border: none;
+    margin: 20px 0;
+    &:hover{
+        transition: ease 0.4s;
+        font-size: 1.2em;
+        width: 30%;
+        box-shadow: inset 0 0 1em green, 0 0 1em green;
+        background-color: green; 
+    }
+}
+.spanError {
+    margin: 5px 0;
+    color: #9cc5cb;
+}
+
+    

@@ -1,0 +1,30 @@
+.cardBody{
+    background-color: #CCC;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+    margin: 20px 0;
+    padding: 2%;
+    font-size: 0.6em;
+    border-radius: 20px 0px 20px 0;
+    position: relative;
+}
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+.btnFav {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+}
+.btnClose {
+    border-radius: 50%; 
+    border: none;
+}
+img{
+    border-radius: 0 20px 0 20px;
+}

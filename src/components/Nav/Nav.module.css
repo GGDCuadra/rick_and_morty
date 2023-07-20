@@ -1,0 +1,28 @@
+.nav {
+    background-color:transparent;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.btnNavLink {
+    
+    height: fit-content;
+    background-color: transparent;
+    
+    color: white;
+    border:  none;
+    font-size: 1.2em;
+    &:hover {
+        transition: ease-in-out 0.9s;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+}
+.btnNavLink .btnLink {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+}
