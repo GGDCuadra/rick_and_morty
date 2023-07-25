@@ -5,7 +5,7 @@ const Favorites = ({myFavorites}) => {
     console.log(myFavorites);
     return (
         <div>
-            <h2>hola</h2>   
+            <h2>FAVORITOS</h2>   
             {
                 
                 <Cards characters={myFavorites} /> 

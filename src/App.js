@@ -40,8 +40,13 @@ function App() {
       .then(({ data }) => {
          // Verificamos que exista un valor
          if (data.name) {
+            const isExistCharacter = characters.some((char) => char.id === data.id)
             //Aca realizamos una cb que primero obtiene todo mi estado localm luego le hace una copia con el ... y luego le añade data 
-            setCharacters((oldChars) => [...oldChars, data]);
+            if(!isExistCharacter){
+               setCharacters((oldChars) => [...oldChars, data]);
+            } else {
+               alert ("Ese personaje con el id introducido, ya esta en pantalla")
+            }
             
          } else {
             alert('¡No hay personajes con este ID!');
@@ -55,6 +60,26 @@ function App() {
       const characterFiltered = characters.filter(character => character.id !== Number(id))
       setCharacters(characterFiltered)
    }
+   const onRandom = () => {
+      axios.get("https://rickandmortyapi.com/api/character/")
+        .then((response) => {
+          const data = response.data;
+          if (data && data.results) {
+            const randomIndex = Math.floor(Math.random() * data.results.length);
+            const randomCharacter = data.results[randomIndex];
+            const isExistCharacter = characters.some((char) => char.id === randomCharacter.id);
+            if (!isExistCharacter) {
+              setCharacters((oldChars) => [...oldChars, randomCharacter]);
+            } else {
+              // Si ya existe el personaje, vuelva a llamar a la función para obtener otro aleatorio
+              onRandom();
+            }
+          }
+        })
+        .catch((error) => {
+          console.log("Error al obtener los datos:", error);
+        });
+    };
    return (
          //?Por qué hay que pasarle como propiedad onSearch?
          //! Debemos hacerlo ya App no puede pasarle a SearchBar directamente las props, asi que Nav le va a pasar a Searchbar para que pueda usarlo
@@ -62,7 +87,7 @@ function App() {
          //!Ademas debemos pasarle onClose a Cards
       <div className='App'>
          {
-            pathname !== '/'&& <Nav onSearch={onSearch} access={access} setAccess={setAccess}/> 
+            pathname !== '/'&& <Nav onSearch={onSearch} onRandom ={onRandom}access={access} setAccess={setAccess}/> 
          }
          <Routes>
             <Route path='/' element={<Form login={login}/>}/>

@@ -16,13 +16,18 @@
     border:  none;
     font-size: 1.2em;
     &:hover {
-        transition: ease-in-out 0.9s;
+        transition: ease-in-out 0.4s;
         border: 1px solid white;
         border-radius: 5px;
     }
-}
-.btnNavLink .btnLink {
+} 
+.navlink{
     text-decoration: none;
-    text-transform: none;
     color: white;
+}
+.active {
+    color: greenyellow;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-shadow: inherit 0 0 0.5em currentColor;
 }

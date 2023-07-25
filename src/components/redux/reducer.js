@@ -1,14 +1,17 @@
 import { ADD_FAVORITE, DELETE_FAVORITE } from "./actions-types.js";
 
 const initialState = {
-    myFavorites : []
+    myFavorites : [],
+    allCharacters : []
 }
+
 const reducer = (state = initialState,  {type, payload}) =>{
     switch (type) {
         case ADD_FAVORITE:
             return {
                 ...state,
-                myFavorites:[...state.myFavorites, payload]
+                myFavorites:[...state.allCharacters, payload],
+                allCharacters: [...state.allCharacters, payload]
             }
         case DELETE_FAVORITE: 
             return {

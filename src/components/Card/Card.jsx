@@ -37,12 +37,12 @@ function Card({ id, name, species, gender, image, onClose, deleteFavorite, addFa
          
          <img src={image} alt={name} />
 
-         <Link to={`/detail/${id}`}>
-            <h2>{name}</h2>
+         <Link className={style.link} to={`/detail/${id}`}>
+            <h2 className={style.name}>{name}</h2>
          </Link>
          <div>
-            <h2>{species}</h2>
-            <h2>{gender}</h2>
+            <h2>Species: {species}</h2>
+            <h2>Gender: {gender}</h2>
          </div>
          
 
