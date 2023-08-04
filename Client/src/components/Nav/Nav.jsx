@@ -12,9 +12,9 @@ const Navbar = ({ onSearch, access, setAccess, onRandom }) => {
     return (
         <nav className={styledNav.nav}>
             <button onClick={handleLogOut} className={styledNav.btnNavLink}>Log Out</button>
-            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink} activeClassName={styledNav.active} to="/about">About</NavLink></button>
-            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink}  activeClassName={styledNav.active} to='/home'>Home</NavLink></button>
-            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink}  activeClassName={styledNav.active} to='/favorites'>Favorite</NavLink></button>
+            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink} to="/about">About</NavLink></button>
+            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink} to='/home'>Home</NavLink></button>
+            <button className={styledNav.btnNavLink}><NavLink className={styledNav.navlink} to='/favorites'>Favorite</NavLink></button>
             <button onClick={onRandom}>Personaje random</button>
             <SearchBar onSearch={onSearch} />
 

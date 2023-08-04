@@ -1,0 +1,59 @@
+.cardBody{
+    background: #455d7a;
+
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+    margin: 20px 0;
+    padding: 1%;
+    font-size: 0.8em;
+    border-radius: 20px ;
+    position: relative;
+    color: #e3e3e3;
+}
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+.btnFav {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    font-size: 1.2em;
+}
+.btnClose {
+    border-radius: 50%; 
+    border: none;
+    background: none;
+    font-size: 1.2em;
+}
+img{
+    border-radius: 20px 20px 20px 20px;
+}
+.link {
+    text-decoration: none;
+}
+.name{
+    font-size: 2.2em;
+    text-decoration: none;
+    color: #e3e3e3;
+    position: relative;
+    display: inline-block;
+    &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f95959;;
+    transition: width 0.3s ease;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
